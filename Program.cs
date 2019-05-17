@@ -15,7 +15,7 @@ namespace photo_metadata
                 .WithNotParsed(HandleNotParsed);
 
             Console.WriteLine("Press 'q' to quit.");
-            while (Console.Read() != 'q') ;
+            while (Console.Read() != 'q');
         }
 
         private static void HandleNotParsed(IEnumerable<Error> obj)
