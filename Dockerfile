@@ -4,7 +4,7 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
 WORKDIR /src
 COPY ["photo-metadata.csproj", ""]
-RUN dotnet restore "/photo-metadata.csproj"
+RUN dotnet restore "photo-metadata.csproj"
 COPY . .
 WORKDIR "/src/"
 RUN dotnet build "photo-metadata.csproj" -c Release -o /app
